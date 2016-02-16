@@ -1,3 +1,11 @@
 <div class="container">
-  <p>Show a list of anagrams for "<%= @word %>"</p>
+ <br>
+  <form id="input_word" action="/:word" method="post">
+    <label for="word">Show a list of anagrams for:</label>
+    <input type="text" name="input_word">
+    <input type="submit" value="submit">
+  </form>
+  <br>
+  <%= Word.get_anagrams(@word) %>
+
 </div>
